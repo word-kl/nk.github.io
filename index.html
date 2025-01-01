@@ -112,16 +112,17 @@
     <canvas id="permanentFireworkCanvas" class="hidden"></canvas>
     <!-- 音频元素，包含多种音频格式，自动播放，初始隐藏 -->
     <audio id="fireworkSound" class="hidden">
-        <source src="久石譲 - Summer.mp3" type="audio/mpeg">
-        <source src="久石譲 - Summer.ogg" type="audio/ogg">
-        <source src="久石譲 - Summer.wav" type="audio/wav">
+        <source src="audio/久石譲 - Summer.mp3" type="audio/mpeg">
+        <source src="audio/久石譲 - Summer.ogg" type="audio/ogg">
+        <source src="audio/久石譲 - Summer.wav" type="audio/wav">
     </audio>
     <!-- 新增的祝福语悬浮窗元素 -->
     <div class="blessing-popup hidden" id="blessingPopup"></div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // 祝福语内容
-            const blessing = `刘钰怡，蛇年到，愿你如灵蛇般轻盈自在，新岁平安喜乐!`;
+            const blessing = `刘钰怡，蛇年到，愿你如灵蛇般轻盈自在，
+新岁平安喜乐!`;
             // 获取 DOM 元素
             const submitButton = document.getElementById('submitButton');
             const startButton = document.getElementById('startButton');
@@ -271,7 +272,7 @@
                 // 更新粒子位置和属性
                 update() {
                     this.vx += this.ax;
-                    this.vy += this.ay + 0.098; // 模拟重力加速度 9.8m/s²
+                    this.vy += this.ay + 0.018; // 模拟重力加速度 9.8m/s²
                     // 模拟空气阻力，假设阻力与速度成正比
                     this.vx *= 0.99;
                     this.vy *= 0.99;
